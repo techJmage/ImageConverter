@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageConverter</name>
+    </assembly>
+    <members>
+        <member name="T:ImageConverter.Convert">
+            <summary>A simple image converter</summary>
+            <example>
+              <para>Usage as follows:</para>
+              <code>
+            public void ToWebpTest(string inputPath, string outputPath)
+            {
+                Convert.To(inputPath, outputPath, ImageMagick.MagickFormat.WebP);
+                Assert.IsTrue(File.Exists(outputPath));
+                var fi = new FileInfo(outputPath);
+                Console.WriteLine(fi.Length);
+                Assert.IsTrue(fi.Length &gt; 1);
+            }
+            </code>
+            </example>
+            <remarks>
+            For supported formats refer to 
+            <see cref="T:ImageMagick.MagickFormat"/>
+            </remarks>
+            <seealso cref="T:ImageMagick.MagickFormat"/>
+            <seealso cref="N:ImageMagick"/>
+        </member>
+        <member name="M:ImageConverter.Convert.To(System.Byte[],ImageMagick.MagickFormat,System.Int32)">
+            <summary>
+            Convert an image data of any popular format to another format data
+            </summary>
+            <param name="input">The input.</param>
+            <param name="format">The format.</param>
+            <param name="quality">The quality. Default 90. It can be 0 - 100.</param>
+            <returns>converted image data</returns>
+            <seealso cref="M:ImageConverter.Convert.To(System.IO.Stream,System.IO.Stream,ImageMagick.MagickFormat,System.Int32)"/>
+            <seealso cref="M:ImageConverter.Convert.To(System.String,System.String,ImageMagick.MagickFormat,System.Int32)"/>
+        </member>
+        <member name="M:ImageConverter.Convert.To(System.IO.Stream,System.IO.Stream,ImageMagick.MagickFormat,System.Int32)">
+            <summary>
+            Convert an image stream of any popular format to another format stream
+            </summary>
+            <param name="inputStream">The input stream.</param>
+            <param name="outputStream">The output stream.</param>
+            <param name="format">The format.</param>
+            <param name="quality">The quality. Default 90. It can be 0 - 100.</param>
+            <seealso cref="M:ImageConverter.Convert.To(System.Byte[],ImageMagick.MagickFormat,System.Int32)"/>
+            <seealso cref="M:ImageConverter.Convert.To(System.String,System.String,ImageMagick.MagickFormat,System.Int32)"/>
+        </member>
+        <member name="M:ImageConverter.Convert.To(System.String,System.String,ImageMagick.MagickFormat,System.Int32)">
+            <summary>
+            Convert an input image from a specified path to any popular format and save to another specified path
+            </summary>
+            <param name="inputPath">The input path.</param>
+            <param name="outputPath">The output path.</param>
+            <param name="format">The format.</param>
+            <param name="quality">The quality. Default 90. It can be 0 - 100.</param>
+            <seealso cref="M:ImageConverter.Convert.To(System.IO.Stream,System.IO.Stream,ImageMagick.MagickFormat,System.Int32)"/>
+            <seealso cref="M:ImageConverter.Convert.To(System.Byte[],ImageMagick.MagickFormat,System.Int32)"/>
+        </member>
+    </members>
+</doc>
