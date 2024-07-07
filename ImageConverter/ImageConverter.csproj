@@ -7,15 +7,15 @@
 		<Version>1.0.0</Version>
 		<Authors>Palash J Karmaker</Authors>
 		<Description>Image converted using ImageMagick</Description>
-		<PackageProjectUrl>https://github.com/PalashKarmaker/CypherQueryBuilder</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/PalashKarmaker/CypherQueryBuilder</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/PalashKarmaker/ImageConverter</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/PalashKarmaker/ImageConverter</RepositoryUrl>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<DocumentationFile>$(MSBuildProjectDirectory)\Readme.xml</DocumentationFile>
 		<DefaultDocumentationGeneratedPages>Assembly</DefaultDocumentationGeneratedPages>
 		<PackageReadmeFile>index.md</PackageReadmeFile>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
